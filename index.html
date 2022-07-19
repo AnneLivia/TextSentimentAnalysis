@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Setiment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ML5.js library -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="assets/index.js"></script>
+    <link href="assets/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container w-50 p-3">
+      <div class="row">
+        <img
+          src="assets/images/curious.gif"
+          class="animated-img rounded mx-auto d-block img-thumbnail w-25 p-3"
+          width="200"
+          height="200"
+        />
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3 ms-5 me-5">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Type something bellow and press enter</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="user_feelings"
+              placeholder="Example: I'm feeling happy today"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3">
+          <span class="loading"></span>
+          <p id="score"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 mt-1">
+          <p id="info">
+            A score value between 0 is "negative" and 1 is "positive".
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
