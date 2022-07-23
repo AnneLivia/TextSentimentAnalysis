@@ -8,13 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     text.addEventListener("change", (e) => {
         spinner.className = "loading loader";
-        predict(e.target.value);
+        const text = e.target.value.trim();
+        if (text)
+            predict(text);
+        else
+            spinner.className = "loading";
     });
 
     // para colocar o gif de curious novamente
     text.addEventListener("keydown", ({ key }) => {
         if (["Backspace", "Delete"].includes(key)) {
             img.src = "assets/images/curious.gif";
+            score.innerHTML = "";
         }
     });
 
@@ -25,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // When the model is loaded
     const predict = (text) => {
+   
         const prediction = sentiment.predict(text);
 
         spinner.className = "loading";
